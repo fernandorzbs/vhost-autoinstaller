@@ -4,8 +4,6 @@ echo "-----------------------------------------";
 echo "Auto installer ubuntu"
 echo "Autor: Fernando Rz";
 echo "Versión: 1.0";
-echo "PHP: 8.0";
-echo "MariaDB: 8.0";
 echo "-----------------------------------------";
 echo -e "\n"
 read -p 'Desea instalar vHost auto load  [y/n]: ' answer
@@ -26,13 +24,6 @@ echo "  Configurando Zona / Crontab   "
 echo "================================"
 echo -e "\n\n"
 sudo timedatectl set-timezone America/Asuncion
-echo -e "\n\n"
-echo "================================"
-echo "  Instalando Maria DB   "
-echo "================================"
-echo -e "\n\n"
-sudo apt-get install mariadb-server -y
-sudo mysql_secure_installation -y
 echo -e "\n\n"
 echo "================================"
 echo "  Instalando PHP 8.0            "
