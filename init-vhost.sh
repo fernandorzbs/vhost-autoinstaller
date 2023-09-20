@@ -26,6 +26,7 @@ sudo a2ensite "$PROYECTNAME.conf"
 echo -e "127.0.0.1 $PROYECTNAME.home" >> "/etc/hosts"
 service apache2 reload
 systemctl reload apache2
+sudo chmod 777 -R $PROYECTNAME
 echo "================================"
 echo "Abriendo en el navegador"
 URL="http://$PROYECTNAME.home"
