@@ -6,7 +6,7 @@ echo "Versión: 1.0";
 echo "========================================="
 read -p 'Nombre del proyecto a crear: ' PROYECTNAME
 URLPROYECT="/var/www/$PROYECTNAME"
-sudo mkdir $URLPROYECT
+mkdir $URLPROYECT
 sudo cp "index.php" $URLPROYECT
 echo "================================"
 echo "Generando .conf"
@@ -26,7 +26,6 @@ sudo a2ensite "$PROYECTNAME.conf"
 echo -e "127.0.0.1 $PROYECTNAME.home" >> "/etc/hosts"
 service apache2 reload
 systemctl reload apache2
-sudo chmod 777 -R /var/www/$PROYECTNAME
 echo "================================"
 echo "Abriendo en el navegador"
 URL="http://$PROYECTNAME.home"

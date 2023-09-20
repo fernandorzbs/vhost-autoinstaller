@@ -30,7 +30,6 @@ echo "  Instalando Apache             "
 echo "================================"
 echo -e "\n\n"
 sudo apt install -y apache2
-sudo chmod 777 -R /var/www
 echo -e "\n\n"
 echo "================================"
 echo "  Instalando PHP 7.3            "
